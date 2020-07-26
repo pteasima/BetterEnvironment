@@ -30,4 +30,8 @@ public extension View {
     self
       .environment(\.[key: Tagged<Key, Unit>(rawValue: Unit())], value)
   }
+  func transformEnvironment<Key: EnvironmentKey>(key: Key.Type, transform: @escaping (inout Key.Value) -> Void) -> some View {
+    self
+      .transformEnvironment(\.[key: Tagged<Key, Unit>(rawValue: Unit())], transform: transform)
+  }
 }
