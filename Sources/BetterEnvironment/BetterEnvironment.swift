@@ -19,6 +19,10 @@ public extension Environment {
   init<Key: EnvironmentKey>(key: Key.Type) where Key.Value == Value {
     self.init(\.[key: Tagged<Key, Unit>(rawValue: Unit())])
   }
+  
+  init<Key: EnvironmentKey>(key: Key.Type, selection: WritableKeyPath<Key.Value, Value>) {
+    self.init((\EnvironmentValues.[key: Tagged<Key, Unit>(rawValue: Unit())]).appending(path: selection))
+  }
 }
 
 public extension View {
