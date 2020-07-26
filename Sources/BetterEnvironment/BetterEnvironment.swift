@@ -15,18 +15,15 @@ extension EnvironmentValues {
   }
 }
 
-extension Environment {
+public extension Environment {
   init<Key: EnvironmentKey>(key: Key.Type) where Key.Value == Value {
     self.init(\.[key: Tagged<Key, Unit>(rawValue: Unit())])
   }
 }
 
-extension View {
+public extension View {
   func environment<Key: EnvironmentKey>(key: Key.Type, value: Key.Value) -> some View {
     self
       .environment(\.[key: Tagged<Key, Unit>(rawValue: Unit())], value)
   }
-}
-struct BetterEnvironment {
-    var text = "Hello, World!"
 }
