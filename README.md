@@ -32,4 +32,4 @@ struct ContentView: View {
 }
 ```
 
-Works with any `EvironmentKey` and is purely additive.
+Works with any `EnvironmentKey` and is purely additive.
