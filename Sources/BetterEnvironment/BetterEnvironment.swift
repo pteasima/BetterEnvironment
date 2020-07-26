@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Unit: Hashable, Codable { }
+struct Unit: Hashable { }
 // this is https://github.com/pointfreeco/swift-tagged but I chose not to depend on it.
 struct Tagged<Tag, RawValue> {
   var rawValue: RawValue
