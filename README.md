@@ -1,5 +1,7 @@
 # BetterEnvironment
 
+## [DEPRECATED], use https://twitter.com/pteasima/status/1347927033100251139 instead. Its so minimal it doesn't warrant a dependency.
+
 SwiftUI µsugar.
 
 Lets you subscript by the key type, like this:
